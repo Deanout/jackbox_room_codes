@@ -1,0 +1,17 @@
+<div id="<%= dom_id room %>">
+  <% if current_user %>
+    <p>
+      <strong>Player Name:</strong>
+      <%= current_user.email %>
+    </p>
+  <% else %>
+    <p>
+      <strong>Player Name:</strong>
+      <%= session[:player_name] %>
+    </p>
+  <% end %>
+  <p>
+    <strong>Slug:</strong>
+    <%= room.slug %>
+  </p>
+</div>

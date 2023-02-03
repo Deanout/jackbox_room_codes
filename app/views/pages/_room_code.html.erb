@@ -1,0 +1,15 @@
+<% if room.present? %>
+  <div class="d-flex justify-content-center">
+    <div class="card mx-auto" style="width: 400px; height: 250px;">
+      <div class="card-header">
+        <h3 class="card-title">Room Code</h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Your room code is <%= room.slug.upcase %></p>
+        <p class="card-text">Share this code with your friends to join the room</p>
+        <p class="card-text">Click the button below to start the game</p>
+        <%= button_to "Start Game", room_path(room), method: :get %>
+      </div>
+    </div>
+  </div>
+<% end %>
